@@ -7,6 +7,8 @@ This project was inspired by [this video](https://www.youtube.com/watch?v=PppslX
 - **Database:** SQLite  
 - **Containerization:** Docker
 
+![](https://github.com/tjrelyts/contact-manager/blob/main/asset/msedge_QboipZ74Z1.gif)
+
 # Docker Setup
 
 This project uses **Docker** to containerize both the backend (Node.js + Express) and frontend (Next.js), allowing you to run the entire application locally or in production without worrying about environment setup.
