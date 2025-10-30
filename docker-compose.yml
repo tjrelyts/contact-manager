@@ -1,0 +1,29 @@
+services:
+  server:
+    build: ./server
+    container_name: contact-server
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+    networks:
+      - contact-network
+
+  client:
+    build: ./client
+    container_name: contact-client
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - NEXT_PUBLIC_API_URL=http://server:5000
+    depends_on:
+      - server
+    networks:
+      - contact-network
+
+networks:
+  contact-network:
+    driver: bridge
